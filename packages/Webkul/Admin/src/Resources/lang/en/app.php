@@ -1737,4 +1737,5 @@ return [
             'pending_payment' => 'Pending Payment',
         ],
     ],
+    'stripe-apikey'  => 'Api Key'
 ];

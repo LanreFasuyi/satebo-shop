@@ -21,4 +21,5 @@
 {{-- custom css --}}
 <style>
     {!! core()->getConfigData('general.content.custom_scripts.custom_css') !!}
+    
 </style>

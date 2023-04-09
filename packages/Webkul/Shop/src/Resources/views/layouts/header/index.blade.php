@@ -7,7 +7,7 @@
     }
 ?>
 
-<div class="header" id="header">
+<div class="header bg-theme" id="header">
     <div class="header-top">
         <div class="left-content">
             <ul class="logo-container">
