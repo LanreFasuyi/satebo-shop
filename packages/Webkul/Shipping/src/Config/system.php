@@ -111,7 +111,8 @@ return [
                 'locale_based'  => false,
             ],
         ],
-    ], [
+    ], 
+    [
         'key'    => 'sales.carriers.flatrate',
         'name'   => 'admin::app.admin.system.flate-rate-shipping',
         'sort'   => 2,
@@ -163,4 +164,67 @@ return [
             ],
         ],
     ],
+
+
+    [
+        'key'    => 'sales.carriers.fedex_ground',
+        'name'   => 'admin::app.admin.system.fedex',
+        'sort'   => 3,
+        'fields' => [
+            [
+                'name'          => 'title',
+                'title'         => 'admin::app.admin.system.title',
+                'type'          => 'depends',
+                'depend'        => 'active:1',
+                'validation'    => 'required_if:active,1',
+                'channel_based' => true,
+                'locale_based'  => true,
+            ], [
+                'name'          => 'description',
+                'title'         => 'admin::app.admin.system.description',
+                'type'          => 'textarea',
+                'channel_based' => true,
+                'locale_based'  => true,
+            ], [
+                'name'          => 'default_rate',
+                'title'         => 'admin::app.admin.system.rate',
+                'type'          => 'depends',
+                'depend'        => 'active:1',
+                'validation'    => 'required_if:active,1',
+                'channel_based' => true,
+                'locale_based'  => false,
+            ], [
+                'name'    => 'type',
+                'title'   => 'admin::app.admin.system.type',
+                'type'    => 'select',
+                'options' => [
+                    [
+                        'title' => 'Per Unit',
+                        'value' => 'per_unit',
+                    ], [
+                        'title' => 'Per Order',
+                        'value' => 'per_order',
+                    ],
+                ],
+                'channel_based' => true,
+                'locale_based'  => false,
+            ], [
+                'name'          => 'active',
+                'title'         => 'admin::app.admin.system.status',
+                'type'          => 'boolean',
+                'validation'    => 'required',
+                'channel_based' => true,
+                'locale_based'  => false,
+            ],
+        ],
+    ],
+
+
+    
+
+
+    
+    
+    
+    
 ];

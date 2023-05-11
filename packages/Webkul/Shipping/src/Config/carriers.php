@@ -19,4 +19,14 @@ return [
         'default_rate' => '0',
         'class'        => 'Webkul\Shipping\Carriers\Free',
     ],
+
+    'fedex' => [
+        'code'         => 'fedex',
+        'title'        => 'FedEx',
+        'description'  => 'FedEx Shipping',
+        'active'       => true,
+        'default_rate' => '0',
+        'class'        => 'Webkul\Shipping\Carriers\Fedex',
+    ],
+
 ];
